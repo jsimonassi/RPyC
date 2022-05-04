@@ -13,6 +13,10 @@ class MyService(rpyc.Service):
     exposed_the_real_answer_though = 43     # este é um atributo exposto
     def get_question(self):  # este método não é exposto
         return "Qual é  a cor do cavalo branco de Napoleão?"
+
+    def exposed_sum(self, array):
+        return sum(array)
+        
 #Para iniciar o servidor
 if __name__ == "__main__":
     print ("Iniciando o servidor...")
